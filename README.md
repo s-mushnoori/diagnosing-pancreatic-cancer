@@ -1,5 +1,5 @@
 # diagnosing-pancreatic-cancer
-#### Applying ML techniques on highly dimensional mass spectroscopy data to enable early detection of pancreatic cancer.
+## Applying ML techniques on highly dimensional mass spectroscopy data to enable early detection of pancreatic cancer.
 
 
 Pancreatic cancer is a deadly cancer, and is typically diagnosed in its late stages. The average 5-year survival is around 9%, but over half of the patients are diagnosed after the cancer metastasises to other organs of the body, at which point, the survival rate drops to around 3% ([Source](https://seer.cancer.gov/statfacts/html/pancreas.html)). Pancreatic Ductal Adenocarcinoma (PDAC), the most common form of pancreatic cancer is notoriously resistant to established treatments such as chemotherapy owing to certain characteristics of the tumor microenvironment. Having previously worked in this space, I have been fascinated by the unique characteristics of the disease. One thing is clear: **Early detection is key to improving the survival outcomes of the disease.** 
