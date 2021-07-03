@@ -47,14 +47,14 @@ However, PCA also gives us some insight into how much we can reduce the dimensio
 With  this in mind, we can now use random forest to select the 100 most important features and recreate the dataset to only contain these columns. Now  that we have a much more manageable dataset, we can start training our machine learning  models to classify these samples. 
 
 The following models were trained and optimized:
-- Random Forest
-- Support Vector Machines
-- Logistic Regression
-- k Nearest Neighbours
+- Random Forest (58% prediction accuracy)
+- Support Vector Machines (62% prediction accuracy)
+- Logistic Regression (51% prediction accuracy)
+- k Nearest Neighbours (62% prediction accuracy)
 
-## Results and Conclusions
+## Conclusions
 
-**Overall, the machine learning models were not very succesful in accurately classifying the samples. These results are disappointing, but there are still some insights to be gained from this project.**
+**Overall, the machine learning models were not very succesfull in accurately classifying the samples. These results are disappointing, but there are still some insights to be gained from this project.**
 - First we note that despite best efforts, the models are unable to classify the control and panIN samples accurately. In this particular run, SVM and KNN showed the highest accuracy. Of the two, we would choose KNN since it minimized false negatives. However, these results are not reproducible and different models perform better in different runs.
 - All the models have a tendency to overpredict as positive. All things considered, for a diagnostics usecase, it is better to have more false positives and false negatives, as these models tend to do. This is because the consequences of falsely predicting a disease (false positives) in patients are far lower than missing a large number cases (false negatives).
 - This is still a good starting point, since machine learning in diagnostics is not meant to replace the role of a doctor, but to streamline and simplify it. Models like these can still be used to filter out low probability cases and save physicians time and hospitals money.
