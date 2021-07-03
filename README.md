@@ -28,13 +28,13 @@ We can see some peaks in  intensity, but looking at the amplitude, there is a hu
 ## Creation and visualization of entire dataset
 Now if we want to look at the dataset as a whole, we want to combine all the files in a way that each *row* now corresponds to a sample, and each *column* corresponds to the intensity of signal at a corresponding value of 'M/z'. In other words, each value of 'M/z' is now a 'feature', and each row is now a sample. The problem here is that we now have several thousand features and about two hundred samples. This can be tough to analyze, but more on that later. 
 
-With the intensities normalized and our dataset created, we can visualize the samples as a spectrogram. Visually  these look  very similar, and the goal of the project is to hopefully train a model to successfully detect differences that we manually cannot.
+With the intensities normalized and our dataset created, we can visualize the samples as a **spectrogram**. Visually  these look  very similar, and the goal of the project is to hopefully train a model to successfully detect differences that we manually cannot.
 
 <img  src="https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Spectrogram%20Control.png"  width =3500>
 
 <img  src="https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Spectrogram%20PanIN.png" width  =3500>
 
-Principal Component Analysis is a common way to visualize highly dimensional data. Ideally, we would be able to use PCA to create 2 principal components that explain a high amount variance in the data, and enable us to visualize the distribution of samples. Unfortunately, with this data, this was not the case and the control and panIN groups were highly  overlapped.
+**Principal Component** Analysis is a common way to visualize highly dimensional data. Ideally, we would be able to use PCA to create 2 principal components that explain a high amount variance in the data, and enable us to visualize the distribution of samples. Unfortunately, with this data, this was not the case and the control and panIN groups were highly  overlapped.
 
 <img src="https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/PCA.png">
 
