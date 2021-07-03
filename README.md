@@ -28,6 +28,8 @@ Now if we want to look at the dataset as a whole, we want to combine all the fil
 
 With the intensities normalizsed and our dataset created, we can visualizse the samples as a spectrogram. 
 
-!(https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Spectrogram%20Control.png)
+![Spectrogram control](https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Spectrogram%20Control.png)
 
+![Spectrogram panIN](https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Spectrogram%20PanIN.png)
 
+asa
