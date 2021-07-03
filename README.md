@@ -34,9 +34,10 @@ With the intensities normalized and our dataset created, we can visualize the sa
 
 <img  src="https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Spectrogram%20PanIN.png" width  =3500>
 
-**Principal Component** Analysis is a common way to visualize highly dimensional data. Ideally, we would be able to use PCA to create 2 principal components that explain a high amount variance in the data, and enable us to visualize the distribution of samples. Unfortunately, with this data, this was not the case and the control and panIN groups were highly  overlapped.
+**Principal Component Analysis** is a common way to visualize highly dimensional data. Ideally, we would be able to use PCA to create 2 principal components that explain a high amount variance in the data, and enable us to visualize the distribution of samples. Unfortunately, with this data, this was not the case and the control and panIN groups were highly  overlapped.
 
 <img src="https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/PCA.png">
 
 However, PCA also gives us some insight into how much we can reduce the dimensionality of the dataset. The image below shows that we need about 100 features to describe 95% of the variance observed. Note that in the original dataset, we have over 6700 features. 
 
+<img src="">
