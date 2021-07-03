@@ -22,8 +22,12 @@ Here's what the mass spectroscopy data for a control and panIN sample looks like
 
 ![Mass Spectroscopy: M/Z vs Intensity; control and panIN](https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Mass%20Spectrum.png)
 
-We can see some peaks in  intensity, but looking at the amplitude, there is a huge difference depending on the peak. This data will have to be normalized to improve our odds of successfully training a machine learning algortithm to classify the samples. The  normalization is done by subtracting from each intensity (for each sample) the median of the bottom 20% of intensities  (noise reduction),  dividing by the median of the top 5% of intensities, and taking the square root (scaling). Now if we want to look at the dataset as a whole, we want to combine all the files in a way that each *row* now corresponds to a sample, and each *column* corresponds to the intensity of signal at a corresponding value of 'M/z'. In other words, each value of 'M/z' is now a 'feature', and each row is now a sample. The problem here is that we now have several thousand features and about two hundred samples. This can be tough to analyze, but more on that later. With the intensities normalizsed and our dataset created, we can visualizse the samples as a spectrogram. 
+We can see some peaks in  intensity, but looking at the amplitude, there is a huge difference depending on the peak. This data will have to be normalized to improve our odds of successfully training a machine learning algortithm to classify the samples. The  normalization is done by subtracting from each intensity (for each sample) the median of the bottom 20% of intensities  (noise reduction),  dividing by the median of the top 5% of intensities, and taking the square root (scaling). 
 
-![Spectrograms](https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Spectrogram%20Control.png)
+Now if we want to look at the dataset as a whole, we want to combine all the files in a way that each *row* now corresponds to a sample, and each *column* corresponds to the intensity of signal at a corresponding value of 'M/z'. In other words, each value of 'M/z' is now a 'feature', and each row is now a sample. The problem here is that we now have several thousand features and about two hundred samples. This can be tough to analyze, but more on that later. 
+
+With the intensities normalizsed and our dataset created, we can visualizse the samples as a spectrogram. 
+
+!(https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Spectrogram%20Control.png)
 
 
