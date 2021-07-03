@@ -40,4 +40,27 @@ With the intensities normalized and our dataset created, we can visualize the sa
 
 However, PCA also gives us some insight into how much we can reduce the dimensionality of the dataset. The image below shows that we need about 100 features to describe 95% of the variance observed. Note that in the original dataset, we have over 6700 features. 
 
-<img src="">
+<img src="https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Variance%20explained.png">
+
+##  Machine Learning
+
+With  this in mind, we can now use random forest to select the 100 most important features and recreate the dataset to only contain these columns. Now  that we have a much more manageable dataset, we can start training our machine learning  models to classify these samples. 
+
+The following models were trained and optimized:
+- Random Forest
+- Support Vector Machines
+- Logistic Regression
+- k Nearest Neighbours
+
+## Results and Conclusions
+
+**Overall, the machine learning models were not very succesful in accurately classifying the samples. These results are disappointing, but there are still some insights to be gained from this project.
+- First we note that despite best efforts, the models are unable to classify the control and panIN samples accurately. In this particular run, SVM and KNN showed the highest accuracy. Of the two, we would choose KNN since it minimized false negatives. However, these results are not reproducible and different models perform better in different runs.
+- All the models have a tendency to overpredict as positive. All things considered, for a diagnostics usecase, it is better to have more false positives and false negatives, as these models tend to do. This is because the consequences of falsely predicting a disease (false positives) in patients are far lower than missing a large number cases (false negatives).
+- This is still a good starting point, since machine learning in diagnostics is not meant to replace the role of a doctor, but to streamline and simplify it. Models like these can still be used to filter out low probability cases and save physicians time and hospitals money.
+
+**Next, we ask ourselves, why are the results so poor, and what can be done to improve them?
+- Note that these serum samples were collected from mouse models and not humans. Similar proteomic studies in other cancers (namely ovarian and prostate) showed excellent results on human samples. This could potentially point to lower reliability of mouse serum samples for proteomic analysis.
+- Looking at the spectrographs, there is reason to doubt the quality of spectal data obtained. All samples have some peaks that are several orders of magnitude larger than others. Looking at other spectrometry research papers, these differences in amplitudes are not nearly as high. This may indicate issues at the point of data collection (poorly calibrated devices for instance)
+- Additionally, there is the possibility that there simply aren't enough samples to properly train the models. A larger sample size may result in better accuracy.
+- Finally, the most disappointing possibility is that we cannot in fact use these techniques to identify pre-cancerous states in pancreatic cancer. Sometimes this is just the reality of data science. However, there have been more recent publications on the use of proteomics for early cancer detection, and I will be on the lookout for more datasets to repeat this project with.
