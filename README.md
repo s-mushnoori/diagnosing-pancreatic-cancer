@@ -26,10 +26,9 @@ We can see some peaks in  intensity, but looking at the amplitude, there is a hu
 
 Now if we want to look at the dataset as a whole, we want to combine all the files in a way that each *row* now corresponds to a sample, and each *column* corresponds to the intensity of signal at a corresponding value of 'M/z'. In other words, each value of 'M/z' is now a 'feature', and each row is now a sample. The problem here is that we now have several thousand features and about two hundred samples. This can be tough to analyze, but more on that later. 
 
-With the intensities normalizsed and our dataset created, we can visualizse the samples as a spectrogram. 
+With the intensities normalized and our dataset created, we can visualize the samples as a spectrogram. Visually  these look  very similar, and the goal of the project is to hopefully train a model to successfully detect differences that we manually cannot.
 
 ![Spectrogram control](https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Spectrogram%20Control.png)
 
 ![Spectrogram panIN](https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Spectrogram%20PanIN.png)
 
-asa
