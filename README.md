@@ -28,7 +28,7 @@ Now if we want to look at the dataset as a whole, we want to combine all the fil
 
 With the intensities normalized and our dataset created, we can visualize the samples as a spectrogram. Visually  these look  very similar, and the goal of the project is to hopefully train a model to successfully detect differences that we manually cannot.
 
-<img  src="https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Spectrogram%20Control.png"  width=3500>
+<img  src="https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Spectrogram%20Control.png"  width =50>
 
-<img  src="https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Spectrogram%20PanIN.png" width=3500>
+<img  src="https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Spectrogram%20PanIN.png" width  =3500>
 
