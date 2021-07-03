@@ -20,7 +20,7 @@ The datasets come in two folders, one for the control and the other for mice wit
 
 Here's what the mass spectroscopy data for a control and panIN sample looks like: 
 
-![Mass Spectroscopy: M/Z vs Intensity; control and panIN](https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Mass%20Spectrum.png = 250x50)
+![Mass Spectroscopy: M/Z vs Intensity; control and panIN](https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Mass%20Spectrum.png width=250)
 
 We can see some peaks in  intensity, but looking at the amplitude, there is a huge difference depending on the peak. This data will have to be normalized to improve our odds of successfully training a machine learning algortithm to classify the samples. The  normalization is done by subtracting from each intensity (for each sample) the median of the bottom 20% of intensities  (noise reduction),  dividing by the median of the top 5% of intensities, and taking the square root (scaling). 
 
