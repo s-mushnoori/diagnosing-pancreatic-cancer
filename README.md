@@ -56,7 +56,7 @@ The following models were trained and optimized:
 
 **Overall, the machine learning models were not very succesfull in accurately classifying the samples. These results are disappointing, but there are still some insights to be gained from this project.**
 - First we note that despite best efforts, the models are unable to classify the control and panIN samples accurately. In this particular run, SVM and KNN showed the highest accuracy. Of the two, we would choose KNN since it minimized false negatives. However, these results are not reproducible and different models perform better in different runs.
-- All the models have a tendency to overpredict as positive. All things considered, for a diagnostics usecase, it is better to have more false positives and false negatives, as these models tend to do. This is because the consequences of falsely predicting a disease (false positives) in patients are far lower than missing a large number cases (false negatives).
+- All the models have a tendency to overpredict as positive. All things considered, for a diagnostics usecase, _it is better to have more false positives than false negatives_, as these models tend to do. This is because the consequences of falsely predicting a disease (false positives) in patients are far lower than missing a large number cases (false negatives).
 - This is still a good starting point, since machine learning in diagnostics is not meant to replace the role of a doctor, but to streamline and simplify it. Models like these can still be used to filter out low probability cases and save physicians time and hospitals money.
 
 **Next, we ask ourselves, why are the results so poor, and what can be done to improve them?**
