@@ -47,9 +47,9 @@ However, PCA also gives us some insight into how much we can reduce the dimensio
 With  this in mind, we can now use random forest to select the 100 most important features and recreate the dataset to only contain these columns. Now  that we have a much more manageable dataset, we can start training our machine learning  models to classify these samples. 
 
 The following models were trained and optimized:
-- Random Forest (58% prediction accuracy)
-- Support Vector Machines (62% prediction accuracy)
-- Logistic Regression (51% prediction accuracy)
+- Random Forest (55% prediction accuracy)
+- Support Vector Machines (60% prediction accuracy)
+- Logistic Regression (49% prediction accuracy)
 - k Nearest Neighbours (62% prediction accuracy)
 
 ## Conclusions
