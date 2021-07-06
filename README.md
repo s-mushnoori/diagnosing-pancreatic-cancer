@@ -47,17 +47,18 @@ However, PCA also gives us some insight into how much we can reduce the dimensio
 With  this in mind, we can now use random forest to select the 100 most important features and recreate the dataset to only contain these columns. Now  that we have a much more manageable dataset, we can start training our machine learning  models to classify these samples. 
 
 The following models were trained and optimized:
-- Random Forest (55% prediction accuracy)
-- Support Vector Machines (60% prediction accuracy)
-- Logistic Regression (49% prediction accuracy)
-- k Nearest Neighbours (62% prediction accuracy)
+- Random Forest (64% prediction accuracy)
+- Support Vector Machines (73% prediction accuracy)
+- Logistic Regression (64% prediction accuracy)
+- k Nearest Neighbours (64% prediction accuracy)
 
 ## Conclusions
 
 **Overall, the machine learning models were not very succesfull in accurately classifying the samples. These results are disappointing, but there are still some insights to be gained from this project.**
-- First we note that despite best efforts, the models are unable to classify the control and panIN samples accurately. In this particular run, SVM and KNN showed the highest accuracy. Of the two, we would choose KNN since it minimized false negatives. However, these results are not reproducible and different models perform better in different runs. k fold cross validation may lead to some overall consistency in model selection.
+- First we note that despite best efforts, the models are unable to classify the control and panIN samples accurately. In this particular run, SVM  showed the highest accuracy. SVM  also  has the highest recall, and typically the fewest false negatives. However, these results are not reproducible and different models perform better in different runs. k fold cross validation may lead to some overall consistency in model selection, but the small sample size may prevent this.
 - All the models have a tendency to overpredict as positive. All things considered, for a diagnostics usecase, _it is better to have more false positives than false negatives_, as these models tend to do. This is because the consequences of falsely predicting a disease (false positives) in patients are far lower than missing a large number cases (false negatives).
-- This is still a good starting point, since machine learning in diagnostics is not meant to replace the role of a doctor, but to streamline and simplify it. Models like these can still be used to filter out low probability cases and save physicians time and hospitals money.
+- Of note, is that since the dataset is slightly imbalanced, stratifying the test train splits did seem to improve the results significantly.
+- This is still a good starting point, since machine learning in diagnostics is not meant to replace the role of a physician, but to streamline and simplify it. Models like these can still be used to filter out low probability cases and save physicians time and hospitals money.
 
 **Next, we ask ourselves, why are the results so poor, and what can be done to improve them?**
 - Note that these serum samples were collected from mouse models and not humans. Similar proteomic studies in other cancers (namely ovarian and prostate) showed excellent results on human samples. This could potentially point to lower reliability of mouse serum samples for proteomic analysis.
