@@ -55,11 +55,6 @@ Support Vector Machines|69%|73%|
 Logistic Regression|62%|76%|
 k Nearest Neighbors|69%|57%|
 
-- Random Forest (64% prediction accuracy)
-- Support Vector Machines (73% prediction accuracy)
-- Logistic Regression (64% prediction accuracy)
-- k Nearest Neighbours (64% prediction accuracy)
-
 ## Conclusions
 
 **There are many insights to be gained from this project.**
