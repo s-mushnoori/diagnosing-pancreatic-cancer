@@ -48,12 +48,12 @@ With  this in mind, we can now use random forest to select the 100 most importan
 
 The following models were trained and optimized:
 
-|Model|Recall|Accuracy|
-|:--:|:--:|:--:|
-Random  Forest|69%|70%|
-Support Vector Machines|69%|73%|
-Logistic Regression|62%|76%|
-k Nearest Neighbors|69%|57%|
+|Model|Recall|Accuracy|Recall: Improvement from baseline|
+|:--:|:--:|:--:|:--:|
+Random  Forest|69%|70%|+19%|
+Support Vector Machines|69%|73%|+19%|
+Logistic Regression|62%|76%|+12%|
+k Nearest Neighbors|69%|57%|+19%|
 
 ## Conclusions
 
