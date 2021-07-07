@@ -48,7 +48,7 @@ With  this in mind, we can now use random forest to select the 100 most importan
 
 The following models were trained and optimized:
 
-|Model|Accuracy|Recall|
+|Model|Recall|Accuracy|
 |:--:|:--:|:--:|
 Random  Forest|69%|70%|
 Support Vector Machines|69%|73%|
