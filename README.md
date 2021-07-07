@@ -47,6 +47,14 @@ However, PCA also gives us some insight into how much we can reduce the dimensio
 With  this in mind, we can now use random forest to select the 100 most important features and recreate the dataset to only contain these columns. Now  that we have a much more manageable dataset, we can start training our machine learning  models to classify these samples. 
 
 The following models were trained and optimized:
+
+|Model|Accuracy|Recall|
+|:--:|:--:|:--:|
+Random  Forest|69%|70%|
+Support Vector Machines|69%|73%|
+Logistic Regression|62%|76%|
+k Nearest Neighbors|69%|57%|
+
 - Random Forest (64% prediction accuracy)
 - Support Vector Machines (73% prediction accuracy)
 - Logistic Regression (64% prediction accuracy)
@@ -54,14 +62,20 @@ The following models were trained and optimized:
 
 ## Conclusions
 
-**Overall, the machine learning models were not very succesfull in accurately classifying the samples. These results are disappointing, but there are still some insights to be gained from this project.**
-- First we note that despite best efforts, the models are unable to classify the control and panIN samples accurately. In this particular run, SVM  showed the highest accuracy. SVM  also  has the highest recall, and typically the fewest false negatives. However, these results are not reproducible and different models perform better in different runs. k fold cross validation may lead to some overall consistency in model selection, but the small sample size may prevent this.
-- All the models have a tendency to overpredict as positive. All things considered, for a diagnostics usecase, _it is better to have more false positives than false negatives_, as these models tend to do. This is because the consequences of falsely predicting a disease (false positives) in patients are far lower than missing a large number cases (false negatives).
-- Of note, is that since the dataset is slightly imbalanced, stratifying the test train splits did seem to improve the results significantly.
-- This is still a good starting point, since machine learning in diagnostics is not meant to replace the role of a physician, but to streamline and simplify it. Models like these can still be used to filter out low probability cases and save physicians time and hospitals money.
+**There are many insights to be gained from this project.**
+- For a diagnostics usecase, it is better to have more false positives than false negatives. This is because the consequences of falsely predicting a disease (false positives) in patients are far lower than missing a large number cases (false negatives). For this reason, recall (TP/(TP + FN)) is a better measure of model performance than accuracy.
 
-**Next, we ask ourselves, why are the results so poor, and what can be done to improve them?**
+- We note that to some extent, the models are unable to classify the control and panIN samples accurately. In this particular run, SVM and Random Forest showed the highest accuracy. SVM had the highest recall score on this run and is thus preferred. However, these results are not reproducible and different models perform better in different runs.
+
+-Of note, is that since the dataset is slightly imbalanced, stratifying the test train splits did seem to improve the results significantly.
+
+- This is a good starting point, since machine learning in diagnostics is not meant to replace the role of a doctor, but to streamline and simplify it. Models like these can still be used to filter out low probability cases and save physicians time and hospitals money.
+
+**Next, we ask ourselves what can be done to improve the results?**
 - Note that these serum samples were collected from mouse models and not humans. Similar proteomic studies in other cancers (namely ovarian and prostate) showed excellent results on human samples. This could potentially point to lower reliability of mouse serum samples for proteomic analysis.
-- Looking at the spectrographs, there is reason to doubt the quality of spectral data obtained. All samples have some peaks that are several orders of magnitude larger than others. Looking at other spectrometry research papers, these differences in amplitudes are not nearly as high. This may indicate issues at the point of data collection (poorly calibrated devices for instance)
-- Additionally, there is the possibility that there simply aren't enough samples to properly train the models. A larger sample size may result in better accuracy.
+
+- Looking at the spectrographs, there is reason to doubt the quality of spectal data obtained. All samples have some peaks that are several orders of magnitude larger than others. Looking at other spectrometry research papers, these differences in amplitudes are not nearly as high. This may indicate issues at the point of data collection (poorly calibrated devices for instance)
+
+- Additionally, there is the possibility that there simply aren't enough samples to properly train the models. A larger sample size may result in better accuracy and recall.
+
 - Finally, the most disappointing possibility is that we cannot in fact use these techniques to identify pre-cancerous states in pancreatic cancer. Sometimes this is just the reality of data science. However, there have been more recent publications on the use of proteomics for early cancer detection, and I will be on the lookout for more datasets to repeat this project with.
