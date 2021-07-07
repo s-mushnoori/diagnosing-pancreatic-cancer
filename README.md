@@ -62,7 +62,7 @@ k Nearest Neighbors|69%|57%|
 
 - We note that to some extent, the models are unable to classify the control and panIN samples accurately. In this particular run, SVM and Random Forest showed the highest accuracy. SVM had the highest recall score on this run and is thus preferred. However, these results are not reproducible and different models perform better in different runs.
 
--Of note, is that since the dataset is slightly imbalanced, stratifying the test train splits did seem to improve the results significantly.
+- Of note, is that since the dataset is slightly imbalanced, stratifying the test train splits did seem to improve the results significantly.
 
 - This is a good starting point, since machine learning in diagnostics is not meant to replace the role of a doctor, but to streamline and simplify it. Models like these can still be used to filter out low probability cases and save physicians time and hospitals money.
 
