@@ -38,13 +38,13 @@ With the intensities normalized and our dataset created, we can visualize the sa
 
 <img src="https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/PCA.png">
 
-However, PCA also gives us some insight into how much we can reduce the dimensionality of the dataset. The image below shows that we need about 100 features to describe 95% of the variance observed. Note that in the original dataset, we have over 6700 features. 
+However, PCA also gives us some insight into how much we can reduce the dimensionality of the dataset. The image below shows that we need about 100 principal components to describe 95% of the variance observed. Note that in the original dataset, we have over 6700 features. 
 
 <img src="https://github.com/s-mushnoori/diagnosing-pancreatic-cancer/blob/master/Figures/Variance%20explained.png">
 
 ##  Machine Learning
 
-With  this in mind, we can now use random forest to select the 100 most important features and recreate the dataset to only contain these columns. Now  that we have a much more manageable dataset, we can start training our machine learning  models to classify these samples. 
+With  this in mind, we can now use random forest to select the most important features and recreate the dataset to only contain these columns. The number of features here may not necessarily be the same as the number of principal components. Future analysis could evaluate the benefits of running the predictive model after PCA dimensionality reduction, but for now we will just select the most important of the existing features. Now that we have a much more manageable dataset, we can start training our machine learning  models to classify these samples. 
 
 The following models were trained and optimized:
 
